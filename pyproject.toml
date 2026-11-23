@@ -1,0 +1,20 @@
+[project]
+name = "rebuild-stripe-online-migrations"
+version = "0.1.0"
+description = "Stripe's four-phase online migration, rebuilt small on SQL Server"
+requires-python = ">=3.11"
+dependencies = ["pyodbc>=5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["migration"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
